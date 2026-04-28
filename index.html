@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>GoPoznań: Main Page</title>
+<title>GoPoznań: GoPoznań - Projekt Zaliczeniowy JPO</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,10 +91,51 @@ $(function(){initNavTree('index.html','',''); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">GoPoznań Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">GoPoznań - Projekt Zaliczeniowy JPO </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
+<p>Autor: Stas</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+Opis Projektu</h1>
+<p>GoPoznań to inteligentna wyszukiwarka połączeń komunikacji miejskiej ZTM Poznań. Aplikacja została napisana w C++ (Qt6 Widgets) z użyciem wielowątkowości. Pobiera otwarte dane GTFS, przetwarza je skryptem w Pythonie (wyszukiwanie trasy), a następnie komunikuje się z lokalnym dużym modelem językowym (LLM Ollama - qwen2.5:3b) poprzez REST API, aby w przyjazny sposób opisać znalezione połączenie. LLM dodatkowo generuje kod Pythona do wyrysowania wykresu, który aplikacja automatycznie uruchamia i wyświetla w oknie.</p>
+<p>Aplikacja jest odporna na brak połączenia sieciowego i błędy środowiskowe (informuje o problemach i nie zawiesza GUI).</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+Wymagania systemowe</h1>
+<ol type="1">
+<li>Środowisko C++ z zainstalowaną biblioteką Qt 6 (moduły: Widgets, Network, Concurrent, Test).</li>
+<li>Zainstalowany i uruchomiony lokalnie serwer Ollama z pobranym modelem <span class="tt">qwen2.5:3b</span> (Można uruchomić poprzez komendę w terminalu: <span class="tt">ollama run qwen2.5:3b</span>).</li>
+<li>Środowisko Python (w wersji 3.x) dodane do zmiennej środowiskowej PATH.</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+Instalacja bibliotek Pythona</h1>
+<p>Przed pierwszym uruchomieniem aplikacji należy zainstalować wymagane biblioteki: </p><div class="fragment"><div class="line">pip install -r requirements.txt</div>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Uruchomienie projektu (Aplikacja główna)</h1>
+<ol type="1">
+<li>Otwórz projekt (plik <span class="tt">CMakeLists.txt</span>) w Qt Creator.</li>
+<li>Z lewej strony w zakładce "Projekty" upewnij się, że wybrany jest "Zbuduj (Build)" i profil kompilatora (np. MinGW).</li>
+<li>Na samym dole po lewej kliknij w ikonę komputera (Target) i wybierz docelowy program: <span class="tt">zal_jpo</span>.</li>
+<li>Skompiluj projekt (Ctrl+B) i uruchom (Ctrl+R lub zielony trójkąt).</li>
+<li>Przy pierwszym uruchomieniu aplikacja automatycznie pobierze plik GTFS z serwerów ZTM Poznań.</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Uruchomienie Testów Jednostkowych (Opcja na 5.0)</h1>
+<p>Aby uruchomić pełen zestaw testów weryfikujących logikę:</p><ol type="1">
+<li>Podobnie jak wyżej, w Qt Creator kliknij na dole po lewej w ikonę komputera (Wybór docelowego profilu / Target).</li>
+<li>Zamiast <span class="tt">zal_jpo</span> z listy rozwijanej wybierz <b><span class="tt"><a class="el" href="class_go_poznan_tests.html">GoPoznanTests</a></span></b>.</li>
+<li>Uruchom projekt (Ctrl+R lub zielony trójkąt).</li>
+<li>W oknie komunikacyjnym na dole Qt Creatora (Application Output / Wyjście aplikacji) pojawi się raport z testów, z wypisanymi wynikami (PASS/FAIL) dla każdego sprawdzenia.</li>
+</ol>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+Generowanie Dokumentacji (Doxygen)</h1>
+<p>Aby wygenerować dokumentację kodu:</p><ol type="1">
+<li>Zainstaluj program Doxygen.</li>
+<li>Będąc w głównym katalogu projektu uruchom komendę: <span class="tt">doxygen Doxyfile</span></li>
+<li>Dokumentacja HTML pojawi się w folderze <span class="tt">docs/html</span>. Otwórz plik <span class="tt">docs/html/index.html</span>. </li>
+</ol>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->
