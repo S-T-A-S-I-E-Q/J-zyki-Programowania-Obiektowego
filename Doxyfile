@@ -1,0 +1,23 @@
+DOXYFILE_ENCODING      = UTF-8
+PROJECT_NAME           = "GoPoznań"
+PROJECT_BRIEF          = "Wyszukiwarka połączeń komunikacji miejskiej ZTM Poznań z LLM Ollama"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = .
+FILE_PATTERNS          = *.h *.cpp
+RECURSIVE              = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+OPTIMIZE_OUTPUT_FOR_C  = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+# --- Opcje eleganckiego wyglądu (Doxygen Awesome CSS) ---
+GENERATE_TREEVIEW      = YES
+HTML_EXTRA_STYLESHEET  = doxygen-awesome.css \
+                         doxygen-awesome-sidebar-only.css \
+                         custom-theme.css
+# Wymuszenie ciemnego motywu
+HTML_COLORSTYLE_HUE    = 220
+HTML_COLORSTYLE_SAT    = 100
+HTML_COLORSTYLE_GAMMA  = 80

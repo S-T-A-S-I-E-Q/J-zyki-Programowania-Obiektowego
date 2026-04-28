@@ -1,0 +1,22 @@
+html {
+    /* Ciemnoniebieskie tło główne zamiast czarnego */
+    --page-background-color: #0a1128 !important;
+    
+    /* Lekko jaśniejsze granatowe tło pod właściwą treścią i w lewym panelu */
+    --content-background: #111d40 !important;
+    --side-nav-background: #0a1128 !important;
+    --toc-background: #0a1128 !important;
+    
+    /* Linie i obramowania z mocniejszym niebieskim odcieniem */
+    --spacing-color: #1a2a5e !important;
+    
+    /* Elementy akcentowane i kafelki - jasny, żarowiasty niebieski */
+    --primary-color: #2196f3 !important;
+    --primary-dark-color: #1976d2 !important;
+    --primary-light-color: #64b5f6 !important;
+    
+    /* Kolor czcionki - bardziej jasnobłękitny / biały */
+    --page-foreground-color: #e3f2fd !important;
+    --separator-color: #1a2a5e !important;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(33, 150, 243, 0.1) !important;
+}
